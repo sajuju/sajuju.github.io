@@ -1,4 +1,16 @@
-@media (max-width: 768px) {
-    nav ul { display: none; }
-    nav ul.active { display: flex; flex-direction: column; }
+/* Ensure dropdown menu is hidden by default */
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    display: none !important; /* Override Tailwind's display */
+}
+
+/* Show dropdown on hover with animation */
+.group:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: block !important; /* Override Tailwind's display */
 }

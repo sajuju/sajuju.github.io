@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sajuju Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <header class="bg-white shadow p-4">
         <div class="container mx-auto flex justify-between items-center">
@@ -16,47 +22,74 @@
             </div>
             <nav class="flex items-center">
                 <button class="hamburger md:hidden focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
                 <ul class="nav-links md:flex md:space-x-4">
                     <li class="relative group">
-                        <a href="#" class="inline-block text-gray-600 hover:text-blue-500 border-b-2 border-blue-500 pb-1 flex items-center">
+                        <a href="#"
+                            class="inline-block text-gray-600 hover:text-blue-500 border-b-2 border-blue-500 pb-1 flex items-center">
                             Top Games
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 ml-1">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-4 h-4 ml-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
                             </svg>
                         </a>
                         <ul class="absolute bg-white shadow-lg rounded mt-2 w-48 dropdown-menu">
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Genshin Impact</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Zenless Zone Zero</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Honkai Star Rail</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Wuthering Waves</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Genshin
+                                    Impact</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Zenless
+                                    Zone Zero</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Honkai
+                                    Star Rail</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Wuthering
+                                    Waves</a></li>
                         </ul>
                     </li>
                     <li class="relative group">
-                        <a href="#" class="inline-block text-gray-600 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 pb-1 flex items-center">
+                        <a href="#"
+                            class="inline-block text-gray-600 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 pb-1 flex items-center">
                             Other Services
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 ml-1">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" class="w-4 h-4 ml-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
                             </svg>
                         </a>
                         <ul class="absolute bg-white shadow-lg rounded mt-2 w-48 dropdown-menu">
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Jual Beli Akun</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Joki Game</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Reroll Akun</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Jual
+                                    Beli Akun</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Joki
+                                    Game</a></li>
+                            <li><a href="#"
+                                    class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Reroll
+                                    Akun</a></li>
                         </ul>
                     </li>
-                    <li><a href="#" class="inline-block text-gray-600 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 pb-1">Reviews</a></li>
-                    <li><a href="#" class="inline-block text-gray-600 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 pb-1">Help Center</a></li>
+                    <li><a href="#"
+                            class="inline-block text-gray-600 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 pb-1">Reviews</a>
+                    </li>
+                    <li><a href="#"
+                            class="inline-block text-gray-600 hover:text-blue-500 hover:border-b-2 hover:border-blue-500 pb-1">Help
+                            Center</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Formulir Login Admin sebagai Modal -->
-    <div id="adminLoginForm" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+    <div id="adminLoginForm"
+        class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
         <div class="bg-white p-6 rounded shadow-lg w-11/12 max-w-sm">
             <h2 class="text-xl font-bold mb-4">Login Admin</h2>
             <form id="loginForm">
@@ -69,7 +102,8 @@
                     <input type="password" id="password" class="w-full p-2 border rounded" required>
                 </div>
                 <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Masuk</button>
-                <button type="button" id="closeLoginForm" class="w-full mt-2 bg-gray-300 text-gray-800 p-2 rounded hover:bg-gray-400">Tutup</button>
+                <button type="button" id="closeLoginForm"
+                    class="w-full mt-2 bg-gray-300 text-gray-800 p-2 rounded hover:bg-gray-400">Tutup</button>
             </form>
         </div>
     </div>
@@ -77,28 +111,31 @@
     <!-- Main Content -->
     <div class="slider">
         <div class="slides">
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
-          <div class="slide"></div>
+            <div class="slide">
+                <img src="assets/slider1.jpg" alt="Slider Image 1" class="w-full h-auto">
+            </div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
         </div>
         <div class="controls">
             <button id="prevBtn" class="nav-btn">
-              <i class="fa-solid fa-chevron-left"></i>
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
             <span id="slideCount">1/4</span>
             <button id="pauseBtn" class="pause-btn">
-              <i class="fa-solid fa-pause"></i>
+                <i class="fa-solid fa-pause"></i>
             </button>
             <button id="nextBtn" class="nav-btn">
-              <i class="fa-solid fa-chevron-right"></i>
+                <i class="fa-solid fa-chevron-right"></i>
             </button>
-          </div>
-        <div class="time-progress">
-          <div id="timeBar" class="time-bar"></div>
         </div>
-      </div>
-     
+        <div class="time-progress">
+            <div id="timeBar" class="time-bar"></div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

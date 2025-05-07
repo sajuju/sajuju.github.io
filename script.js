@@ -78,7 +78,7 @@ let currentSlide = 0;
     const slideCount = document.getElementById('slideCount');
     const timeBar = document.getElementById('timeBar');
     const pauseBtn = document.getElementById('pauseBtn');
-    const slideDuration = 5000;
+    const slideDuration = 10000;
 
     function updateSlider() {
       slides.style.transform = `translateX(-${currentSlide * 100}%)`;

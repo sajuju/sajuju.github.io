@@ -1,23 +1,22 @@
-// Inisialisasi buffer untuk menampung penekanan tombol
-let keyBuffer = '';
-
-// Debugging: Log setiap penekanan tombol
-document.addEventListener('keydown', (event) => {
-    console.log('Tombol ditekan:', event.key); // Debugging
-    keyBuffer += event.key.toLowerCase();
-    console.log('Buffer saat ini:', keyBuffer); // Debugging
-    if (keyBuffer.includes('adminlogin')) {
-        console.log('Admin login terdeteksi!'); // Debugging
-        const adminLoginForm = document.getElementById('adminLoginForm');
-        if (adminLoginForm) {
-            adminLoginForm.classList.remove('hidden');
-            console.log('Formulir ditampilkan'); // Debugging
-        } else {
-            console.error('Elemen adminLoginForm tidak ditemukan!'); // Debugging
+// Inisialisasi untuk pemicu klik logo
+let clickCount = 0;
+const logo = document.querySelector('.logo');
+if (logo) {
+    logo.addEventListener('click', () => {
+        clickCount++;
+        console.log('Logo diklik, jumlah klik:', clickCount); // Debugging
+        if (clickCount === 3) {
+            const adminLoginForm = document.getElementById('adminLoginForm');
+            if (adminLoginForm) {
+                adminLoginForm.classList.remove('hidden');
+                console.log('Formulir login admin ditampilkan'); // Debugging
+            } else {
+                console.error('Elemen adminLoginForm tidak ditemukan!'); // Debugging
+            }
+            clickCount = 0; // Reset jumlah klik
         }
-        keyBuffer = ''; // Reset buffer
-    }
-});
+    });
+}
 
 // Fungsi untuk menyembunyikan formulir saat tombol "Tutup" diklik
 const closeLoginForm = document.getElementById('closeLoginForm');
@@ -52,18 +51,20 @@ if (loginForm) {
     });
 }
 
-// Menyembunyikan formulir saat mengklik di luar
+// Menyembunyikan formulir saat mengklik di luar modal
 document.addEventListener('click', (event) => {
     const adminLoginForm = document.getElementById('adminLoginForm');
     const loginForm = document.getElementById('loginForm');
-    if (adminLoginForm && loginForm && !adminLoginForm.contains(event.target) && !loginForm.contains(event.target)) {
+    if (adminLoginForm && loginForm && !loginForm.contains(event.target) && !logo.contains(event.target)) {
         adminLoginForm.classList.add('hidden');
     }
 });
 
-// Reset buffer jika terlalu panjang
-setInterval(() => {
-    if (keyBuffer.length > 100) {
-        keyBuffer = keyBuffer.slice(-50);
-    }
-}, 10000);
+// Hamburger menu untuk navigasi di HP
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}

@@ -11,8 +11,7 @@
     <header class="bg-white shadow p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="logo">
-                <h1 class="text-2xl font-bold">Reroll Account</h1>
-                <p class="text-sm">Gacha Solutions</p>
+                <img src="assets/sajuju.png" alt="logo sajuju" class="h-12">
             </div>
             <nav class="flex items-center">
                 <ul class="flex space-x-4">
@@ -47,27 +46,28 @@
                     <li><a href="#" class="inline-block text-gray-600 hover:text-blue-500">Reviews</a></li>
                     <li><a href="#" class="inline-block text-gray-600 hover:text-blue-500">Help Center</a></li>
                 </ul>
-                <!-- Formulir Login Admin Tersembunyi -->
-                <div id="adminLoginForm" class="hidden absolute top-full right-0 bg-white shadow-lg rounded mt-2 w-64 z-50">
-                    <div class="p-4">
-                        <h2 class="text-lg font-bold mb-2">Login Admin</h2>
-                        <form id="loginForm">
-                            <div class="mb-2">
-                                <label for="username" class="block text-gray-600 text-sm">Nama Pengguna</label>
-                                <input type="text" id="username" class="w-full p-1 border rounded" required>
-                            </div>
-                            <div class="mb-2">
-                                <label for="password" class="block text-gray-600 text-sm">Kata Sandi</label>
-                                <input type="password" id="password" class="w-full p-1 border rounded" required>
-                            </div>
-                            <button type="submit" class="w-full bg-blue-500 text-white p-1 rounded hover:bg-blue-600 text-sm">Masuk</button>
-                            <button type="button" id="closeLoginForm" class="w-full mt-1 bg-gray-300 text-gray-800 p-1 rounded hover:bg-gray-400 text-sm">Tutup</button>
-                        </form>
-                    </div>
-                </div>
             </nav>
         </div>
     </header>
+
+    <!-- Formulir Login Admin sebagai Modal -->
+    <div id="adminLoginForm" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded shadow-lg w-11/12 max-w-sm">
+            <h2 class="text-xl font-bold mb-4">Login Admin</h2>
+            <form id="loginForm">
+                <div class="mb-4">
+                    <label for="username" class="block text-gray-600 text-sm">Nama Pengguna</label>
+                    <input type="text" id="username" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-gray-600 text-sm">Kata Sandi</label>
+                    <input type="password" id="password" class="w-full p-2 border rounded" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Masuk</button>
+                <button type="button" id="closeLoginForm" class="w-full mt-2 bg-gray-300 text-gray-800 p-2 rounded hover:bg-gray-400">Tutup</button>
+            </form>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

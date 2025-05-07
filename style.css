@@ -14,22 +14,60 @@
     display: block;
 }
 
-/* Gaya untuk formulir login admin */
+/* Gaya untuk formulir login admin sebagai modal di HP */
 #adminLoginForm {
     opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease;
     pointer-events: none;
     display: none;
 }
 
 #adminLoginForm:not(.hidden) {
     opacity: 1;
-    transform: translateY(0);
     pointer-events: auto;
     display: block;
 }
 
 #adminLoginForm.hidden {
     display: none;
+}
+
+/* Responsif: Sembunyikan navbar di layar kecil, tampilkan hamburger */
+@media (max-width: 640px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Tampilkan navbar secara default di layar besar */
+@media (min-width: 641px) {
+    .hamburger {
+        display: none;
+    }
 }

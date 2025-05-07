@@ -118,23 +118,30 @@ let currentSlide = 0;
     });
 
     pauseBtn.addEventListener('click', () => {
-      isPlaying = !isPlaying;
-      if (isPlaying) {
-        pauseBtn.textContent = '||';
-        const elapsed = Date.now() - startTime;
-        remainingTime = Math.max(0, slideDuration - elapsed);
-        timeBar.style.transition = `width ${remainingTime}ms linear`;
-        timeBar.style.width = '100%';
-        startAutoSlide();
-      } else {
-        pauseBtn.textContent = '▶';
-        clearInterval(slideInterval);
-        const elapsed = Date.now() - startTime;
-        const progress = (elapsed / slideDuration) * 100;
-        timeBar.style.transition = 'none';
-        timeBar.style.width = `${progress}%`;
-      }
-    });
+        isPlaying = !isPlaying;
+        const icon = pauseBtn.querySelector('i');
+      
+        if (isPlaying) {
+          icon.classList.remove('fa-play');
+          icon.classList.add('fa-pause');
+      
+          const elapsed = Date.now() - startTime;
+          remainingTime = Math.max(0, slideDuration - elapsed);
+          timeBar.style.transition = `width ${remainingTime}ms linear`;
+          timeBar.style.width = '100%';
+          startAutoSlide();
+        } else {
+          icon.classList.remove('fa-pause');
+          icon.classList.add('fa-play');
+      
+          clearInterval(slideInterval);
+          const elapsed = Date.now() - startTime;
+          const progress = (elapsed / slideDuration) * 100;
+          timeBar.style.transition = 'none';
+          timeBar.style.width = `${progress}%`;
+        }
+      });
+      
 
     let slideInterval;
     function startAutoSlide() {

@@ -6,6 +6,7 @@
     <title>Sajuju Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="bg-white shadow p-4">
@@ -82,11 +83,17 @@
           <div class="slide"></div>
         </div>
         <div class="controls">
-          <button id="prevBtn" class="nav-btn"><</button>
-          <span id="slideCount">1/4</span>
-          <button id="pauseBtn" class="pause-btn">||</button>
-          <button id="nextBtn" class="nav-btn">></button>
-        </div>
+            <button id="prevBtn" class="nav-btn">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <span id="slideCount">1/4</span>
+            <button id="pauseBtn" class="pause-btn">
+              <i class="fa-solid fa-pause"></i>
+            </button>
+            <button id="nextBtn" class="nav-btn">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
         <div class="time-progress">
           <div id="timeBar" class="time-bar"></div>
         </div>

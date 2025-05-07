@@ -64,17 +64,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(245, 245, 245, 0.788);
     padding: 10px 20px;
     border-radius: 25px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0.7;
+    opacity: 0.8;
     transition: opacity 0.3s, transform 0.3s;
   }
-  .controls:hover {
-    opacity: 1;
-    transform: translateX(-50%) scale(1.05);
-  }
+
   .nav-btn {
     width: 30px;
     height: 30px;
@@ -87,6 +84,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  .nav-btn:hover {
+    background-color: #5937d6;
+    transform: scale(1.1);
   }
   .pause-btn {
     width: 30px;
@@ -101,6 +103,12 @@
     align-items: center;
     justify-content: center;
   }
+
+  .pause-btn:hover {
+    background-color: #5937d6;
+    transform: scale(1.1);
+  }
+  
   .time-progress {
     position: absolute;
     bottom: 0;

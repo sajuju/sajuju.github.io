@@ -3,43 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Sajuju Shop">
-    <meta name="description" content="Game Top Up dan Joki Game">
-    <meta name="keywords" content="TopUp, Joki, Genshin, Mihoyo, Honkai Star Rail">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="author" content="Sajuju Shop">
     <title>Sajuju Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@main/index.js"></script>
-    <style>
-        /* Inline CSS for testing dropdown animation */
-        .dropdown-menu {
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            pointer-events: none;
-            display: none; /* Ensure it's hidden by default */
-        }
-
-        .group:hover .dropdown-menu {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-            display: block; /* Show on hover */
-        }
-    </style>
 </head>
 <body>
     <header class="bg-white shadow p-4">
         <div class="container mx-auto flex justify-between items-center">
             <div class="logo">
-                <img src="assets/sajuju.png" alt="sajuju shop" class="h-12"> 
+                <h1 class="text-2xl font-bold">Reroll Account</h1>
+                <p class="text-sm">Gacha Solutions</p>
             </div>
-            <nav>
+            <nav class="flex items-center">
                 <ul class="flex space-x-4">
                     <li class="relative group">
                         <a href="#" class="inline-block text-gray-600 hover:text-blue-500 border-b-2 border-blue-500 pb-1 flex items-center">
@@ -63,14 +38,33 @@
                             </svg>
                         </a>
                         <ul class="absolute bg-white shadow-lg rounded mt-2 w-48 dropdown-menu">
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Jual Beli Akun</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Joki Akun</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Reroll Account</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Mobile Legends</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Free Fire</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">PUBG Mobile</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-600 hover:bg-blue-100 hover:text-blue-500">Fortnite</a></li>
                         </ul>
                     </li>
                     <li><a href="#" class="inline-block text-gray-600 hover:text-blue-500">Reviews</a></li>
                     <li><a href="#" class="inline-block text-gray-600 hover:text-blue-500">Help Center</a></li>
                 </ul>
+                <!-- Formulir Login Admin Tersembunyi -->
+                <div id="adminLoginForm" class="hidden absolute top-full right-0 bg-white shadow-lg rounded mt-2 w-64 z-50">
+                    <div class="p-4">
+                        <h2 class="text-lg font-bold mb-2">Login Admin</h2>
+                        <form id="loginForm">
+                            <div class="mb-2">
+                                <label for="username" class="block text-gray-600 text-sm">Nama Pengguna</label>
+                                <input type="text" id="username" class="w-full p-1 border rounded" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="password" class="block text-gray-600 text-sm">Kata Sandi</label>
+                                <input type="password" id="password" class="w-full p-1 border rounded" required>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-500 text-white p-1 rounded hover:bg-blue-600 text-sm">Masuk</button>
+                            <button type="button" id="closeLoginForm" class="w-full mt-1 bg-gray-300 text-gray-800 p-1 rounded hover:bg-gray-400 text-sm">Tutup</button>
+                        </form>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>

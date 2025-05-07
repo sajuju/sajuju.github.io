@@ -1,16 +1,35 @@
-/* Ensure dropdown menu is hidden by default */
+/* Animasi untuk menu dropdown */
 .dropdown-menu {
     opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
-    display: none !important; /* Override Tailwind's display */
+    display: none;
 }
 
-/* Show dropdown on hover with animation */
 .group:hover .dropdown-menu {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    display: block !important; /* Override Tailwind's display */
+    display: block;
+}
+
+/* Gaya untuk formulir login admin */
+#adminLoginForm {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none;
+    display: none;
+}
+
+#adminLoginForm:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: block;
+}
+
+#adminLoginForm.hidden {
+    display: none;
 }

@@ -143,6 +143,11 @@
         position: static;
         width: 100%;
         box-shadow: none;
+        display: none;
+    }
+
+    .nav-links.active .group .dropdown-menu {
+        display: block;
     }
 
     .hamburger {

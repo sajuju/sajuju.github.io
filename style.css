@@ -5,6 +5,7 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
     display: none;
+    z-index: 1000; /* Pastikan dropdown di atas elemen lain */
 }
 
 .group:hover .dropdown-menu {
@@ -12,6 +13,7 @@
     transform: translateY(0);
     pointer-events: auto;
     display: block;
+    z-index: 1000; /* Pastikan dropdown di atas elemen lain */
 }
 
 /* Gaya untuk formulir login admin sebagai modal di HP */
@@ -53,7 +55,6 @@
 .slide {
     flex: 0 0 100%;
     height: auto;
-    background-size: cover;
     background-position: center;
 }
 

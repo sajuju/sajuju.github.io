@@ -34,35 +34,36 @@
 
 .slider {
     width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
+    max-width: 800px;
+    height: auto;
     position: relative;
-    overflow: visible; /* Sembunyikan bagian yang tidak terlihat */
+    overflow: hidden;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .slides {
-    display: flex; /* Penting! Barisan horizontal */
-    transition: transform 0.5s ease-in-out;
-    width: 100%; /* 4 slide berarti 100% x 4 */
-    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
-  }
-
-  .slide {
-    min-width: 100%;
+    display: flex;
+    width: 100%;
     height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: auto;
     background-size: cover;
     background-position: center;
-  }
+}
 
-.slide-image {
+.slider img {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
     border-radius: 20px;
 }
 
-/* Progress bar langsung di bawah gambar */
 .time-progress {
     width: 100%;
     height: 8px;
@@ -79,49 +80,47 @@
     background: #6b48ff;
     transition: width 0.3s linear;
 }
-
-/* Kontrol di bawah progress bar */
+/* Progress bar langsung di bawah gambar */
 .controls {
-    margin-top: 5px;
+    position: relative;
+    margin-top: 10px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
     background: white;
-    padding: 6px 15px;
+    padding: 6px 12px;
     border-radius: 999px; /* super bulat */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Tombol navigasi */
 .nav-btn,
 .pause-btn {
-    width: 28px;
-    height: 28px;
-    background-color: #7c4dff; /* lebih ungu terang */
+    width: 32px;
+    height: 32px;
+    background-color: #7366ff;
     border: none;
     border-radius: 50%;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .nav-btn:hover,
 .pause-btn:hover {
-    transform: scale(1.1);
-    background-color: #673ab7;
+    background-color: #5a4fcf;
+    transform: scale(1.05);
 }
 
-/* Counter */
 #slideCount {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
     color: #333;
 }
-
 
 /* Responsif: Sembunyikan navbar di layar kecil, tampilkan hamburger */
 @media (max-width: 640px) {

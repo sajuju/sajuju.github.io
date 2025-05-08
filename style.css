@@ -34,16 +34,26 @@
 
 .slider {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    overflow: visible; /* Sembunyikan bagian yang tidak terlihat */
 }
 
 .slides {
-    width: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-}
+    display: flex; /* Penting! Barisan horizontal */
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* 4 slide berarti 100% x 4 */
+    overflow: hidden; /* Sembunyikan bagian yang tidak terlihat */
+  }
+
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 
 .slide-image {
     width: 100%;
@@ -72,13 +82,13 @@
 
 /* Kontrol di bawah progress bar */
 .controls {
-    margin-top: 10px;
+    margin-top: 5px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
     background: white;
-    padding: 6px 12px;
+    padding: 6px 15px;
     border-radius: 999px; /* super bulat */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }

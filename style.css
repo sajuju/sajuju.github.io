@@ -5,7 +5,8 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
     pointer-events: none;
     display: none;
-    z-index: 1000; /* Pastikan dropdown di atas elemen lain */
+    z-index: 1000;
+    /* Pastikan dropdown di atas elemen lain */
 }
 
 .group:hover .dropdown-menu {
@@ -13,7 +14,8 @@
     transform: translateY(0);
     pointer-events: auto;
     display: block;
-    z-index: 1000; /* Pastikan dropdown di atas elemen lain */
+    z-index: 1000;
+    /* Pastikan dropdown di atas elemen lain */
 }
 
 /* Gaya untuk formulir login admin sebagai modal di HP */
@@ -81,6 +83,7 @@
     background: #6b48ff;
     transition: width 0.3s linear;
 }
+
 /* Progress bar langsung di bawah gambar */
 .controls {
     position: relative;
@@ -91,7 +94,8 @@
     gap: 8px;
     background: white;
     padding: 6px 12px;
-    border-radius: 999px; /* super bulat */
+    border-radius: 999px;
+    /* super bulat */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -121,6 +125,25 @@
     font-size: 14px;
     font-weight: 500;
     color: #333;
+}
+
+
+.game-img {
+    transition: transform 0.3s ease;
+}
+
+.game-img:hover {
+    transform: scale(1.1);
+    transform: translateY(-10px);
+}
+
+.game-text {
+    transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.game-img:hover+.game-text {
+    transform: scale(1.1);
+    transform: translateY(-5px);
 }
 
 /* Responsif: Sembunyikan navbar di layar kecil, tampilkan hamburger */

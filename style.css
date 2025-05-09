@@ -127,6 +127,9 @@
     color: #333;
 }
 
+.top-game {
+    margin-top: 10rem;
+}
 
 .game-img {
     transition: transform 0.3s ease;
@@ -148,6 +151,14 @@
     transform: scale(1.1);
     transform: translateY(-5px);
 }
+
+.service {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+    margin-bottom: 20px;
+}
+
 
 /* Responsif: Sembunyikan navbar di layar kecil, tampilkan hamburger */
 @media (max-width: 640px) {

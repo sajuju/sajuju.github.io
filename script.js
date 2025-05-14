@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const adminLoginForm = document.getElementById('adminLoginForm');
     
-    // Check if the current URL is /admin-login
-    if (window.location.pathname === '/admin-login') {
+    // Check if the URL hash is #admin-login
+    const currentHash = window.location.hash.replace('#', '');
+    if (currentHash === '/admin-login') {
         if (adminLoginForm) {
             adminLoginForm.classList.remove('hidden');
-            console.log('Formulir login admin ditampilkan karena URL /admin-login'); // Debugging
+            console.log('Formulir login admin ditampilkan karena hash #admin-login'); // Debugging
         } else {
             console.error('Elemen adminLoginForm tidak ditemukan!'); // Debugging
         }
@@ -17,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         closeLoginForm.addEventListener('click', () => {
             if (adminLoginForm) {
                 adminLoginForm.classList.add('hidden');
+                // Optionally, clear the hash to return to the main page
+                window.location.hash = '';
                 console.log('Formulir ditutup'); // Debugging
             }
         });
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Login admin berhasil!');
                 if (adminLoginForm) {
                     adminLoginForm.classList.add('hidden');
+                    window.location.hash = ''; // Clear the hash after successful login
                 }
             } else {
                 alert('Nama pengguna atau kata sandi salah.');
@@ -47,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const loginForm = document.getElementById('loginForm');
         if (adminLoginForm && loginForm && !loginForm.contains(event.target)) {
             adminLoginForm.classList.add('hidden');
+            window.location.hash = ''; // Clear the hash when closing the form
         }
     });
 
@@ -146,4 +151,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isPlaying) {
         startAutoSlide();
     }
-});
+}); 
